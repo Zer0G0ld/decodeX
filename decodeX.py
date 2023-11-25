@@ -46,6 +46,11 @@ def break_hash(encryption_function):
 
 if __name__ == "__main__":
     print('''
+         #                           #         m    m
+      mmm#   mmm    mmm    mmm    mmm#   mmm    #  #
+     #" "#  #"  #  #"  "  #" "#  #" "#  #"  #    ##
+     #   #  #""""  #      #   #  #   #  #""""   m""m
+     "#m##  "#mm"  "#mm"  "#m#"  "#m##  "#mm"  m"  "m
 
     [ 1 ] MD5
     [ 2 ] SHA-256
