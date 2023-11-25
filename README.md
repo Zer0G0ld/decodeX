@@ -49,7 +49,7 @@ $ cd hashs
 sha256_2023-11-25.txt
 ```
 
-[![Vídeo de Demonstração](https://img.youtube.com/vi/U2Qt7tSC-6c/0.jpg)](https://www.youtube.com/embed/U2Qt7tSC-6c?rel=0&amp;showinfo=0)
+<p>Na dúvida de como usar tem esse vídeo aqui no meu <a href="https://www.youtube.com/embed/U2Qt7tSC-6c?rel=0&amp;showinfo=0">canal</a></p>
 
 
 
