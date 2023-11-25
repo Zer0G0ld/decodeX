@@ -26,6 +26,28 @@
 python3 decodeX.py
 
 ```
+<p>Dentro da pasta wordlist tem wordlists onde o programa lerá e criptografará</p>
+<br>
+<p>Dentro da pasta hashs ficará todos os hashs gerados e eles são separados por 'criptografia_data'.txt </p>
+
+Ex:.
+```
+$ python3 decodeX
+
+    [ 1 ] MD5
+    [ 2 ] SHA-256
+    [ 3 ] SHA-1
+
+
+>> 2
+.
+.
+.
+
+$ cd hashs
+
+sha256_2023-11-25.txt
+```
 
 ## Licença
 Shell Zero está licenciado sob [ Apache-2.0 license](https://github.com/Zer0G0ld/decodeX/blob/main/LICENSE) 
