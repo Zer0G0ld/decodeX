@@ -11,6 +11,12 @@ def sha256(text):
 def sha1(text):
     return hashlib.sha1(text.encode()).hexdigest()
 
+def sha224(text):
+    return hashlib.sha224(text.encode()).hexdigest()
+
+def sha3_512(text):
+    return hashlib.sha3_512(text.encode()).hexdigest()
+
 def break_hash(encryption_function):
     # Caminho para as pastas
     current_folder = os.path.dirname(os.path.abspath(__file__))
@@ -44,6 +50,8 @@ if __name__ == "__main__":
     [ 1 ] MD5
     [ 2 ] SHA-256
     [ 3 ] SHA-1
+    [ 4 ] SHA-224
+    [ 5 ] SHA3-512
 
     ''')
 
@@ -57,6 +65,12 @@ if __name__ == "__main__":
 
     elif inputUser == 3:
         break_hash(sha1)
+
+    elif inputUser == 4:
+        break_hash(sha224)
+
+    elif inputUser == 5:
+        break_hash(sha3_512)
 
     else:
         print("Escolha inválida.")
