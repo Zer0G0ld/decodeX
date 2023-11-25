@@ -1,6 +1,6 @@
 # decodeX
 
-<div aling="center">
+<div align="center">
   <img src="src/decodeX.png" alt="decodeX logo">
 </div>
 
@@ -48,6 +48,10 @@ $ cd hashs
 
 sha256_2023-11-25.txt
 ```
+
+[![Vídeo de Demonstração](https://img.youtube.com/vi/U2Qt7tSC-6c/0.jpg)](https://www.youtube.com/embed/U2Qt7tSC-6c?rel=0&amp;showinfo=0)
+
+
 
 ## Licença
 Shell Zero está licenciado sob [ Apache-2.0 license](https://github.com/Zer0G0ld/decodeX/blob/main/LICENSE) 
