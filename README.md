@@ -4,6 +4,12 @@
   <img src="src/decodeX.png" alt="decodeX logo">
 </div>
 
+## Screenshot
+<div align="center">
+  <img src="./src/Screenshot_decodeX.jpg" weight="200px" height="200px" alt="Screenshot_decodeX">
+  <img src="./src/Screenshot_decodeX(1).jpg" weight="200px" height="200px" alt="Screenshot_decodeX">
+</div>
+
 ## Instalação
 
 | Método   | Comando                                                                                          |
