@@ -3,6 +3,7 @@ import os
 import datetime
 
 def md5(text):
+    print(f"✓ Freito! acesse a pasta hashs \n là fica as hashs guardas e a quebra feita!")
     return hashlib.md5(text.encode()).hexdigest()
 
 def sha256(text):
@@ -44,6 +45,10 @@ def break_hash(encryption_function):
                 output_file.write(f"{word_hash} == {word}\n")
                 print(f"[+] Hash Adicionada: {word_hash} == {word} [+]")
 
+                clear = os.system('clear')
+                print(clear)
+                print(f" ✗   CTRL + C para cancelar a operação")
+
 if __name__ == "__main__":
     print('''
          #                           #         m    m
@@ -78,5 +83,5 @@ if __name__ == "__main__":
         break_hash(sha3_512)
 
     else:
-        print("Escolha inválida.")
+        print("✗ Escolha inválida.")
 
