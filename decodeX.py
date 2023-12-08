@@ -3,7 +3,6 @@ import os
 import datetime
 
 def md5(text):
-    print(f"✓ Freito! acesse a pasta hashs \n là fica as hashs guardas e a quebra feita!")
     return hashlib.md5(text.encode()).hexdigest()
 
 def sha256(text):
@@ -26,8 +25,11 @@ def break_hash(encryption_function):
 
     # Verifica se a pasta existe, se não, cria
     for folder in [wordlist_folder, hashs_folder]:
-        if not os.path.exists(folder):
-            os.makedirs(folder)
+        try:
+            if not os.path.exists(folder):
+                os.makedirs(folder)
+        except Exception as ErrFolder:
+            print(f"✗ Erro ao criar a pasta: {folder}")
 
     # Nome do arquivo de saída baseado na criptografia escolhida e na data atual
     date_today = datetime.date.today().strftime("%Y-%m-%d")
@@ -37,17 +39,27 @@ def break_hash(encryption_function):
     with open(exit_path, 'w') as output_file:
         for filename in os.listdir(wordlist_folder):
             wordlist_path = os.path.join(wordlist_folder, filename)
-            with open(wordlist_path, 'r') as word_file:
-                words = [line.strip() for line in word_file.readlines()]
-            
+            try:
+                with open(wordlist_path, 'r') as word_file:
+                    words = [line.strip() for line in word_file.readlines()]
+            except FileNotFoundError:
+                print(f"✗ Arquivo não encontrado: {wordlist_path}")
+            except Exception as e:
+                print(f"✗ Erro ao ler o arquivo : {e}")
+
             for word in words:
                 word_hash = encryption_function(word)
                 output_file.write(f"{word_hash} == {word}\n")
                 print(f"[+] Hash Adicionada: {word_hash} == {word} [+]")
 
-                clear = os.system('clear')
-                print(clear)
-                print(f" ✗   CTRL + C para cancelar a operação")
+                try:
+                    clear = os.system('clear')
+                    print(clear)
+                    print(f" ✗   CTRL + C para cancelar a operação")
+                    print(clear)
+                except Exception as ErrClear:
+                    print(f"✗ Erro ao limpar o terminal: {e}")
+
 
 if __name__ == "__main__":
     print('''
@@ -69,18 +81,28 @@ if __name__ == "__main__":
 
     if inputUser == 1:
         break_hash(md5)
+        print("\n")
+        print(" ✓    Feito!!! \n    Dê uma olhada na pasta hashs. Lá irá conter as hashs quebradas!")
 
     elif inputUser == 2:
         break_hash(sha256)
+        print("\n")
+        print(" ✓    Feito!!! \n    Dê uma olhada na pasta hashs. Lá irá conter as hashs quebradas!")
 
     elif inputUser == 3:
         break_hash(sha1)
+        print("\n")
+        print(" ✓    Feito!!! \n    Dê uma olhada na pasta hashs. Lá irá conter as hashs quebradas!")
 
     elif inputUser == 4:
         break_hash(sha224)
+        print("\n")
+        print(" ✓    Feito!!! \n    Dê uma olhada na pasta hashs. Lá irá conter as hashs quebradas!")
 
     elif inputUser == 5:
         break_hash(sha3_512)
+        print("\n")
+        print(" ✓    Feito!!! \n    Dê uma olhada na pasta hashs. Lá irá conter as hashs quebradas!")
 
     else:
         print("✗ Escolha inválida.")
